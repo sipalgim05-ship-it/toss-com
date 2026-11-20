@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>toss,com</title>
+
+  <!-- Open Graph (OG) 메타 태그: 카카오톡, SNS 공유 시 미리보기 카드 설정 -->
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="토스" />
+  <meta property="og:title" content="송금 및 결제 정보를 확인하고 있어요" />
+  <meta property="og:description" content="안전한 거래를 위해 잠시만 기다려주세요." />
+  <meta property="og:image" content="blob:https://gemini.google.com/0a96e1b5-104e-42b7-8820-bb321c6eb744" />
+
+  <!-- 트위터(X) 공유 시 큰 이미지 카드 표시용 메타 태그 -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="송금 및 결제 정보를 확인하고 있어요" />
+  <meta name="twitter:description" content="안전한 거래를 위해 잠시만 기다려주세요." />
+  <meta name="twitter:image" content="https://wikimedia.org" />
+
+  <!-- 토스 스타일과 가장 유사한 Pretendard 웹폰트 로드 -->
+  <link rel="stylesheet" as="style" crossorigin href="https://jsdelivr.net" />
+  <style>
+    body {
+      margin: 0;
+      height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      background-color: #ffffff;
+      font-family: "Pretendard", -apple-system, BlinkMacSystemFont, system-ui, sans-serif;
+      color: #191f28;
+    }
+
+    /* 상단 토스 로고 스타일 */
+    .toss-logo {
+      width: 110px;
+      height: auto;
+      margin-bottom: 32px;
+      object-fit: contain;
+    }
+
+    /* 3개 점(Dots) 컨테이너 */
+    .dots-loader {
+      display: flex;
+      gap: 10px;
+      margin-bottom: 24px;
+    }
+
+    /* 개별 점 디자인 */
+    .dot {
+      width: 11px;
+      height: 11px;
+      background-color: #3182f6;
+      border-radius: 50%;
+      animation: tossBounce 1.2s infinite ease-in-out;
+    }
+
+    .dot:nth-child(1) { animation-delay: 0s; }
+    .dot:nth-child(2) { animation-delay: 0.15s; }
+    .dot:nth-child(3) { animation-delay: 0.3s; }
+
+    /* 메인 안내 문구 */
+    .title {
+      font-size: 22px;
+      font-weight: 700;
+      letter-spacing: -0.6px;
+      margin: 0 0 8px 0;
+    }
+
+    /* 서브 안내 문구 */
+    .subtitle {
+      font-size: 15px;
+      font-weight: 500;
+      color: #8b95a1;
+      letter-spacing: -0.3px;
+      margin: 0;
+    }
+
+    /* 부드러운 상하 바운스 애니메이션 */
+    @keyframes tossBounce {
+      0%, 80%, 100% {
+        transform: translateY(0) scale(0.85);
+        opacity: 0.35;
+      }
+      40% {
+        transform: translateY(-10px) scale(1);
+        opacity: 1;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- 토스 로고 이미지 -->
+  <img 
+    src="https://i.namu.wiki/i/28PIoyjyS6FSU2LlUrkmuSTzlOSZIlpAiZPy4DLOhG9N2EG-BF5DkAxLiIpjcpKa9a51N4NWQgEBUHR2vGqw_g.svg" 
+    alt="토스 로고" 
+    class="toss-logo"
+  />
+
+  <!-- 3점 바운스 로딩 -->
+  <div class="dots-loader">
+    <div class="dot"></div>
+    <div class="dot"></div>
+    <div class="dot"></div>
+  </div>
+
+  <!-- 안내 문구 -->
+  <h1 class="title">정보를 불러오고 있어요</h1>
+  <p class="subtitle">잠시만 기다려주세요</p>
+
+</body>
+</html>
